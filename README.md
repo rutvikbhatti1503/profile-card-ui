@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Screenshot 2026-05-06 120755" src="https://github.com/user-attachments/assets/9b37860e-14c3-474e-bc96-7d64cbb614c5" />## 🌐 Live Demo
+## 🌐 Live Demo
 
 🔗 [View Live Project](https://profile-card-using-css.netlify.app/)
 
