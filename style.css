@@ -1,0 +1,186 @@
+/* Badhi CSS Mobile first approach mate aapeli chhe */
+
+/* Univeral selector - default margin padding hatavyu, box size border box & font family universal aapi... */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
+/* Body - background & display flex kari jenathi content center ma dekhay */
+body {
+  background: linear-gradient(135deg, rgb(0,0,0), rgb(20,20,20));
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5;
+}
+
+/* Main div apda web page no */
+.profileCard {
+  width: 75%;
+  height: auto;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 0.25rem rgba(255, 255, 255, 0.01);
+  border-radius: 0.75rem;
+  transition: 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover effect main div ma */
+.profileCard:hover {
+  transform: scale(1.02) translateY(-0.5rem);
+  box-shadow: 0 0 0.5rem rgba(31, 128, 255, 0.2);
+}
+
+/* Image je main div ni andar chhe */
+.profileCard img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  /* Image ma background nathi jethi drop shadow aapyo je image na shape acording shadow aapse */
+  filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.2));
+  transition: 0.75s;
+}
+
+/* Div par hover karta image no drop shdow grow thase */
+.profileCard:hover img{
+  filter: drop-shadow(0px 0px 7.5px rgba(255,255,255,0.4));
+}
+
+/* Div upar hover karta show thati details */
+.profileCard .profileDisc {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  /* bax shadow apyo jenathi div ni upar ni side solid gap na dekhay ek smooth effect create thay */
+  box-shadow: 0rem -0.45rem 0.25rem rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(0.25rem);
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  transition: 0.5s ease;
+  /* By default opacity 0 rakhi jenathi hover upar dekhay */
+  opacity: 0;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  /* padding top side sivay badhe apyu */
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+/* Div par hover thase tyare profile na description ni opacity 1 thay jase */
+.profileCard:hover .profileDisc {
+  opacity: 1;
+}
+
+/* Name */
+.profileCard .profileDisc h2 {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+
+/* Pseudo element no use kari name no pahelo letter moto karyo & color change karyo */
+.profileCard .profileDisc h2::first-letter {
+  color: #0077df;
+  font-size: 1.5rem;
+}
+
+/* Description */
+.profileCard .profileDisc p {
+  color: rgb(240, 240, 240);
+  font-size: 0.6rem;
+  width: 100%;
+  text-align: justify;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* Media query 640px - 767px sudhi width vala device mate */
+@media (min-width : 640px) {
+  .profileCard .profileDisc h2{
+    font-size: 1.1rem;
+  }
+  .profileCard .profileDisc h2::first-letter{
+    font-size: 1.65rem;
+  }
+  .profileCard .profileDisc p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Media query 768px - 1023px sudhi width vala device mate */
+@media (min-width : 768px) {
+  .profileCard{
+    width: 65%;
+  }
+  .profileCard .profileDisc h2{
+    font-size: 1.25rem;
+  }
+  .profileCard .profileDisc h2::first-letter{
+    font-size: 1.75rem;
+  }
+  .profileCard .profileDisc p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media query 1024px - 1279px sudhi width vala device mate */
+@media (min-width : 1024px) {
+  .profileCard{
+    width: 30%;
+  }
+  .profileCard .profileDisc h2{
+    font-size: 1.5rem;
+  }
+  .profileCard .profileDisc h2::first-letter{
+    font-size: 2rem;
+  }
+  .profileCard .profileDisc p {
+    font-size: 1rem;
+  }
+}
+
+/* Media query 1280px - 1535px sudhi width vala device mate */
+@media (min-width : 1280px) {
+  .profileCard{
+    width: 25%;
+  }
+  .profileCard .profileDisc h2{
+    font-size: 1.75rem;
+  }
+  .profileCard .profileDisc h2::first-letter{
+    font-size: 2.25rem;
+  }
+  .profileCard .profileDisc p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Media query 1280px - 1535px sudhi width vala device mate */
+@media (min-width : 1535px) {
+  .profileCard{
+    width: 25%;
+  }
+  .profileCard .profileDisc h2{
+    font-size: 2rem;
+  }
+  .profileCard .profileDisc h2::first-letter{
+    font-size: 2.5rem;
+  }
+  .profileCard .profileDisc p {
+    font-size: 1.1rem;
+  }
+}
